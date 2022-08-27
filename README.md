@@ -46,11 +46,13 @@ Week 12: Review Object Oriented Design
  - Sets
  - Dictionaries
  - If Else
+ - Match
  - While Loop
  - For Loop
  - Functions
  - Arrays
  - Math
+ - Bit Manipulation
  - User Input
  - String Formatting
  - Try Except
