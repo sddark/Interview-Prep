@@ -485,3 +485,322 @@ Or you can use the extend() method, which purpose is to add elements from one li
 `list1.extend(list2)`
 
 `print(list1)`
+
+### Tuples
+---
+Tuples are used to store multiple items in a single variable.
+
+A tuple is a collection which is ordered and unchangeable.
+
+Tuples are written with round brackets.
+
+`thistuple = ("apple", "banana", "cherry")`
+
+`print(thistuple) # ("apple", "banana", "cherry")`
+
+Tuple items are ordered, unchangeable, and allow duplicate values.
+
+Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+
+Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+
+Since tuples are indexed, they can have items with the same value
+
+To determine how many items a tuple has, use the len() function:
+
+To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+
+`thistuple = ("apple",)`
+
+`print(type(thistuple))`
+
+`#NOT a tuple`
+
+`thistuple = ("apple")`
+
+`print(type(thistuple))`
+
+Tuple items can be of any data type, e.g. (String, int and boolean data types).
+
+A tuple can contain different data types
+
+Tuples can be accessed the same way as Lists due to them being indexed as well.
+
+Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.
+
+But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+
+
+`x = ("apple", "banana", "cherry")`
+
+`y = list(x)`
+
+`y[1] = "kiwi"`
+
+`x = tuple(y)`
+
+`print(x)`
+
+Since tuples are immutable, they do not have a build-in append() method, but there are other ways to add items to a tuple.
+
+
+`thistuple = ("apple", "banana", "cherry")`
+
+`y = ("orange",)`
+
+`thistuple += y`
+
+`print(thistuple)`
+
+When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
+
+`fruits = ("apple", "banana", "cherry")`
+
+`(green, yellow, red) = fruits`
+
+`print(green) # apple`
+
+`print(yellow) # banana`
+
+`print(red) # cherry`
+
+If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:
+
+`fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")`
+
+`(green, yellow, *red) = fruits`
+
+`print(green)`
+
+`print(yellow)`
+
+`print(red)`
+
+If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
+
+`fruits = ("apple", "mango", "papaya", "pineapple", "cherry")`
+
+`(green, *tropic, red) = fruits`
+
+`print(green)`
+
+`print(tropic)`
+
+`print(red)`
+
+the output for individual variables is String and the variables left are a List
+
+To join two or more tuples you can use the + operator
+
+Built in methods for tuples
+
+|Method	|Description|
+| --- | --- |
+|count()	|Returns the number of times a specified value occurs in a tuple|
+|index()	|Searches the tuple for a specified value and returns the position of where it was found|
+
+### Sets
+---
+Sets are used to store multiple items in a single variable.
+
+A set is a collection which is unordered, unchangeable*, and unindexed.
+
+Note: Set items are unchangeable, but you can remove items and add new items.
+
+Sets are written with curly brackets.
+
+`thisset = {"apple", "banana", "cherry"}`
+
+`print(thisset)`
+
+Set items are unordered, unchangeable, and do not allow duplicate values.
+
+Unordered means that the items in a set do not have a defined order.
+
+Set items can appear in a different order every time you use them, and cannot be referred to by index or key.
+
+Set items are unchangeable, meaning that we cannot change the items after the set has been created.
+
+Once a set is created, you cannot change its items, but you can remove items and add new items.
+
+Set items can be of any data type
+
+A set can contain different data types
+
+To add one item to a set use the add() method.
+
+To add items from another set into the current set, use the update() method.
+
+`thisset = {"apple", "banana", "cherry"}`
+
+`tropical = {"pineapple", "mango", "papaya"}`
+
+`thisset.update(tropical)`
+
+`print(thisset)`
+
+The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+
+To remove an item in a set, use the remove(), or the discard() method.
+
+Note: If the item to remove does not exist, remove() will raise an error.
+
+Note: If the item to remove does not exist, discard() will NOT raise an error.
+
+You can also use the pop() method to remove an item, but this method will remove the last item. Remember that sets are unordered, so you will not know what item that gets removed.
+
+The return value of the pop() method is the removed item.
+
+Note: Sets are unordered, so when using the pop() method, you do not know which item that gets removed.
+
+The clear() method empties the set
+
+The del keyword will delete the set completely
+
+The union() method returns a new set with all items from both sets:
+
+`set1 = {"a", "b" , "c"}`
+
+`set2 = {1, 2, 3}`
+
+`set3 = set1.union(set2)`
+
+`print(set3)`
+
+Note: Both union() and update() will exclude any duplicate items.
+
+The intersection_update() method will keep only the items that are present in both sets
+
+`x = {"apple", "banana", "cherry"}`
+
+`y = {"google", "microsoft", "apple"}`
+
+`x.intersection_update(y)`
+
+`print(x)`
+
+The intersection() method will return a new set, that only contains the items that are present in both sets.
+
+The symmetric_difference_update() method will keep only the elements that are NOT present in both sets.
+
+The symmetric_difference() method will return a new set, that contains only the elements that are NOT present in both sets.
+
+### Dictionaries
+---
+
+Dictionaries are used to store data values in key:value pairs.
+
+A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+
+Dictionaries are written with curly brackets
+
+`thisdict = {`
+
+`  "brand": "Ford",`
+
+`  "model": "Mustang",`
+
+`  "year": 1964`
+
+`}`
+
+`print(thisdict)`
+
+Dictionary items are ordered, changeable, and does not allow duplicates.
+
+Dictionary items are presented in key:value pairs, and can be referred to by using the key name.
+
+`thisdict = {`
+
+`  "brand": "Ford",`
+
+`  "model": "Mustang",`
+
+`  "year": 1964`
+
+`}`
+
+`print(thisdict["brand"])`
+
+Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+
+Dictionaries cannot have two items with the same key
+
+To determine how many items a dictionary has, use the len() function
+
+The values in dictionary items can be of any data type
+
+From Python's perspective, dictionaries are defined as objects with the data type 'dict'
+
+You can access the items of a dictionary by referring to its key name, inside square brackets
+
+`thisdict = {`
+
+`  "brand": "Ford",`
+
+`  "model": "Mustang",`
+
+`  "year": 1964`
+
+`}`
+
+`x = thisdict["model"]`
+
+There is also a method called get() that will give you the same result
+
+`x = thisdict.get("model")`
+
+The keys() method will return a list of all the keys in the dictionary
+
+`x = thisdict.keys()`
+
+Add a new item to the original dictionary, and see that the keys list gets updated as well:
+
+`car = {`
+
+`"brand": "Ford",`
+
+`"model": "Mustang",`
+
+`"year": 1964`
+
+`}`
+
+`x = car.keys()`
+
+`print(x) #before the change`
+
+`car["color"] = "white"`
+
+`print(x) #after the change`
+
+You can change the value of a specific item by referring to its key name:
+
+The update() method will update the dictionary with the items from the given argument.
+
+The argument must be a dictionary, or an iterable object with key:value pairs.
+
+The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
+
+There are several methods to remove items from a dictionary
+
+The pop() method removes the item with the specified key name
+
+The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead)
+
+The del keyword removes the item with the specified key name
+
+The del keyword can also delete the dictionary completely
+
+The clear() method empties the dictionary
+
+You cannot copy a dictionary simply by typing dict2 = dict1, because: dict2 will only be a reference to dict1, and changes made in dict1 will automatically also be made in dict2.
+
+There are ways to make a copy, one way is to use the built-in Dictionary method copy().
+
+Another way to make a copy is to use the built-in function dict().
+
+A dictionary can contain dictionaries, this is called nested dictionaries.
+
