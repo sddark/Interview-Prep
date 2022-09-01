@@ -78,7 +78,7 @@ if statements cannot be empty, but if you for some reason have an if statement w
 `>  pass`
 
 ### While Loops
-
+---
 With the while loop we can execute a set of statements as long as a condition is true.
 
 Print i as long as i is less than 6:
