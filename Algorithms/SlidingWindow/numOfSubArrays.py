@@ -1,5 +1,5 @@
 class Solution:
-    def numOfSubarrays(self, arr: list[int], k: int, threshold: int) -> int:
+    def numOfSubarrays(arr: list[int], k: int, threshold: int) -> int:
         sum = 0
 
         for i in range(0, k):
@@ -23,4 +23,4 @@ class Solution:
         
         return counter
 
-print(Solution.numOfSubarrays(1,arr = [2,2,2,2,5,5,5,8], k = 3, threshold = 4))
+print(Solution.numOfSubarrays(arr = [2,2,2,2,5,5,5,8], k = 3, threshold = 4))
