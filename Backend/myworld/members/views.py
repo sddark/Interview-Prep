@@ -25,3 +25,8 @@ def addrecord(request):
   member = Members(firstname = x, lastname = y)
   member.save()
   return HttpResponseRedirect(reverse('index'))
+
+def delete(request, id):
+  member = Members.objects.get(id=id)
+  member.delete()
+  return HttpResponseRedirect(reverse('index'))
